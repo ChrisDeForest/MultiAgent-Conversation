@@ -17,7 +17,7 @@ def write_to_file(file_path, text, model_name):
     with open(file_path, "a") as file:
         file.write(formatted_text)
 
-# Mock chatbot logic
+# Generating a response
 def chatbot1_response(input_text):
     url = "http://localhost:11434/api/generate"
     payload = {

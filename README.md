@@ -71,6 +71,23 @@ Ensure you have the following installed:
    ```bash
    npm run dev
 
+### Setting up a Docker container
+1. Install a CPU-only container Docker running Ollama
+   ```bash
+   docker run -d -v ollama:/root/.ollama -p 11401:11434 --name ollama ollama/ollama
+2. Start the container (if not already started)
+   ```bash
+   docker start <container_id>
+3. Open a bash terminal inside the container to start the Ollama model
+   ```bash
+   docker exec -it <container_id> bash
+4. [Optional] Install/Import a model from Ollama's library
+   ```bash
+   ollama pull <model_name>
+5. Run the model
+   ```bash
+   ollama run <model_name>
+
 ## Usage
 1. Start both the backend and frontend servers.
 2. Access the UI at http://localhost:5173.
