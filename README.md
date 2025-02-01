@@ -81,14 +81,30 @@ Ensure you have the following installed:
 3. Open a bash terminal inside the container to start the Ollama model
    ```bash
    docker exec -it <container_id> bash
-4. [Optional] Install/Import a model from Ollama's library
+4. Install a model from Ollama's library or import a model
    ```bash
    ollama pull <model_name>
 5. Run the model
    ```bash
    ollama run <model_name>
 
+> [!IMPORTANT]
+> You must specify an alternate port when installing the Docker container (e.g. 11401)
+> 
+> This allows Docker to map the specified port to Ollama's default internal port (11434)   
+
+### Install a 2nd model locally
+1. Download Ollama from `https://ollama.com/download`
+2. Open a Powershell terminal
+3. Install a model from Ollama's library or import a model
+   ```bash
+   ollama pull <model_name>
+4. Run the model
+   ```bash
+   ollama run <model_name>
+
 ## Usage
+1. Start each LLM (locally and in the Docker container)
 1. Start both the backend and frontend servers.
 2. Access the UI at http://localhost:5173.
 3. Ask a question to start the conversation
