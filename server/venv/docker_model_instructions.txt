@@ -1,0 +1,7 @@
+docker commands to start docker, get into bash terminal, and then run ollama mapped from 11401 (outside) to 11434 (internal, normal ollama port)
+
+docker start 71677457dec9
+docker exec -it 71677457dec9 bash
+ollama run deepseek-r1:8b
+
+should be good to query http://localhost:11401/api/generate using responses in flask backend 
